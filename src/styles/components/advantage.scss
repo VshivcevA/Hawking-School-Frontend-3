@@ -1,0 +1,32 @@
+@import "./src/styles/helpers/variables.scss";
+.advantage {
+
+  &__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    &--second-string {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 37px;
+      color: $lightred;
+    }
+  }
+  &__list {
+    &--item{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      &::marker {
+        color: $orange;
+        font-size: 25px;
+      }
+    }
+  }
+}

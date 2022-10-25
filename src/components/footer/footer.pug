@@ -1,1 +1,18 @@
-
+div.social.social--footer
+  mixin social-list__item(link, src)
+    li.social-list__item
+      a.social-list__link(href=link)
+        img.social-list__img(src='/assets/images/icon/social/'+src+'.svg' alt="" width='25px' height='25px')
+  ul.social-list.social-list--footer
+    +social-list__item(
+      '#',
+      'vk')
+    +social-list__item(
+      '#',
+      'telegram')
+    +social-list__item(
+      '#',
+      'instagram')
+    +social-list__item(
+      '#',
+      'whatsapp')

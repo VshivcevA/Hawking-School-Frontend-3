@@ -6,12 +6,19 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title #{title ? title : 'Заголовок страницы'}
+    title('Монтаж дымоходов')
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet")
     link(href="/assets/styles/main.css" rel="stylesheet")
+    link(rel="shortcut icon" href="/assets/images/icon/favicon.ico" type="image/x-icon")
+    link(rel="icon" href="/assets/images/icon/favicon.ico" type="image/x-icon")
   body
-    main
-      include ../../components/header/header
+    main.page
+      header.header
+        include ../../components/header/header
       block content
-      include ../../components/footer/footer
+      footer
+        include ../../components/footer/footer
     script(src="/assets/js/index.js")
     block scripts

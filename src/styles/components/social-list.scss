@@ -1,0 +1,19 @@
+@import "./src/styles/helpers/variables.scss";
+.social {
+  width:100%;
+  //padding: 0 45px 0 45px;
+  &-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    &--footer {
+      min-width: 320px;
+      min-height: 70px;
+      margin:0;
+      //padding: 0 45px 0 45px;
+      background-color: $darkgreen;
+    }
+  }
+}

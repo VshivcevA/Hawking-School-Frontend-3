@@ -1,1 +1,71 @@
+@import "./src/styles/helpers/variables.scss";
+.header {
+  margin: 0 auto;
+  min-height: 63px;
+  min-width: 260px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 0 15px 0 15px;
+  @media (min-width: $tablet-width)  {
 
+  }
+  &__cart {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 44px;
+    height: 44px;
+    border: solid $lighgrey 1px;
+    border-radius: 50%;
+    background-image: url("/../assets/images/icon/shopping-cart__mobil.svg");
+    &-counter {
+      font-size: 11px;
+      color: white;
+      content: "";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      transform: translate(50%);
+      right: 0;
+      width: 21px;
+      height: 21px;
+      background-color: $lightred;
+      border-radius: 50%;
+      //position: center;
+    ;
+    }
+  }
+  &__logo {
+    margin-right: auto;
+  }
+
+
+  &__menu-burger {
+    width: 44px;
+    height: 44px;
+    border: solid $lochinvar 1px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+
+    & span {
+      width: 18px;
+      height: 1.5px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $lochinvar;
+      &:nth-of-type(2) {
+        top: calc(50% - 6px);
+      }
+      &:nth-of-type(3) {
+        top: calc(50% + 6px);
+      }
+    }
+  }
+}

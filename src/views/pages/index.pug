@@ -3,4 +3,137 @@ extends ../layouts/default
 block variables
 
 block content
-  h1 Главная страница 2
+  div.wrapper
+    h1.title Монтаж дымоходов
+    mixin breadcrumb-list__item(name)
+      li.breadcrumb-list__item
+        a.breadcrumb-list__link(href='#')=name
+    ul.breadcrumb-list
+      +breadcrumb-list__item('Главная')
+      +breadcrumb-list__item('Каталог')
+      +breadcrumb-list__item('Камины')
+      +breadcrumb-list__item('Камины облицовки')
+
+    article.about
+      p
+        | В
+        b(style="color:red")
+          |  Дымоход.ру
+        |  вам помогут как приобрести, так и установить дымоход любой конфигурации. В нашем монтажном отделе, состоящим из трёх бригад работают квалифицированные специалисты, которые ежегодно проходят курсы повышения квалификации. Все работы проводим качественно и аккуратно, в короткий срок и на совесть .
+
+    article.advantage
+      h2.advantage__title
+        | Lorem ipsum dolor sit amet
+      h3.advantage__title--second-string
+        |  Lorem ipsum
+      mixin advantage__list--item(advantage)
+        li.advantage__list--item=advantage
+      ul.advantage__list
+        +advantage__list--item('Доступные цены')
+        +advantage__list--item('Собственное производсвто  Дымоходов')
+        +advantage__list--item('Выполнение необходимых работ, связанных с установкой камина, печи, котла')
+        +advantage__list--item('Гарантия (от трёх до десяти лет)')
+        +advantage__list--item('Работаем чисто, аккуратно, убираем за собой, не сквернословим')
+        +advantage__list--item('Только русские квалифицированные специалисты')
+        +advantage__list--item('Устанавливаем любые дымоходы всех производителей')
+
+    article.process
+      span.red-block
+      h2.process__title Процесс выполнения монтажа
+      mixin process__list--item(advantage)
+        li.process__list--item=advantage
+      ol.process__list
+        +process__list--item('Рассчёт предварительной заявки')
+        +process__list--item('Замер объекта нашим инженером')
+        +process__list--item('Составление Коммерческого предложения по изделиям дымохода и окончательной сметы на  работы ')
+        +process__list--item('Изготовление Дымохода, покраска (если требуется)')
+        +process__list--item('Монтаж продукции, проверка и наладкапробный запуск системы и последующая эксплуатация')
+        +process__list--item('Гарантийное обслуживание по соответствующем сроку')
+
+    article.features
+      span.red-block
+      h2.features__title Почему Дымоход.ру?
+      span.features__text В отличие от других производителей, мы ручаемся за качество продукции, т.к. все Дымоходы изготавливаются из качественной стали, проверенного теплоизолятора, по современной технологии плазменной сварки «встык»
+      mixin features-item(features, src, text)
+        li.features__list--item.features-item
+          img.features-item__img(src='/assets/images/icon/'+src+'.svg' alt="" width='79px' height='79px')
+          h3.features-item__title=features
+          p.features-item__text=text
+            block
+      ul.features__list
+        +features-item(
+          'Большой гарантийный срок',
+          'features-guarantee'
+        )
+          block append
+            p
+              | Крепёж, стыковка элементов – 10 лет
+              br
+              | Сквозная коррозия труб – 5 лет
+              br
+              | Гидроизоляция – 3 года
+        +features-item(
+          'Помощь в покупке агрегата',
+          'features-architect',
+          '(печи, камина, котла), а также качественной установке на объекте с последующим гарантийным сервисом'
+        )
+        +features-item(
+          'Реальные отзывы клиентов',
+          'features-review',
+          'Убедитесь в добросовестности исполнения, прочитав Отзывы клиентов в специальном разделе.'
+        )
+    article.consult
+      h2.consult__title Необходима консультация
+      p.consult__title-text оставьте заявку или свяжитесь с нами в социальных сетях
+      div.social
+        mixin social-list__item(link, src)
+          li.social-list__item
+            a.social-list__link(href=link)
+              img.social-list__img(src='/assets/images/icon/social/'+src+'.svg' alt="" width='25px' height='25px')
+        ul.social-list
+          +social-list__item(
+            '#',
+            'vk')
+          +social-list__item(
+            '#',
+            'telegram')
+          +social-list__item(
+            '#',
+            'instagram')
+          +social-list__item(
+            '#',
+            'whatsapp')
+      div.form
+        h3.form__title Для консультации заполните форму!
+        p.form__title-text И с Вами свяжутся в ближайшее время
+        fieldset.fieldset
+          ul.fieldset__list
+            li.fieldset__title
+              label.fieldset__label.fieldset__label--name(for="name")
+              input.fieldset__input.fieldset__input--name(type="text" id="name" name="name" placeholder="Ваше имя")
+            li.fieldset__title
+              label.fieldset__label.fieldset__label--tel(for="tel")
+              input.fieldset__input.fieldset__input--tel(type="tel" id="tel" name="tel" placeholder="Ваш телефон")
+          input.form__button(type="submit" value="оставить заявку")
+    article.video
+      span.red-block
+      h2.video__title Видео об установке
+      p.video__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      img.video__img(src='/assets/images/video.jpg' alt="" width='100%' height='100%')
+    article.photo
+      span.red-block
+      h2.photo__title Фото выполненных работ
+      p.photo__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      div.photo__album
+        mixin photo-list__item(src)
+          li.photo-list__item
+            img.photo-list__img(src='/assets/images/' + src + '.jpg' alt="" width='100%' height='100%')
+        ul.photo__list.photo-list
+          +photo-list__item('photoexample1')
+          +photo-list__item('photoexample1')
+          +photo-list__item('photoexample2')
+          +photo-list__item('photoexample1')
+          +photo-list__item('photoexample2')
+          +photo-list__item('photoexample1')
+          +photo-list__item('photoexample2')
+          +photo-list__item('photoexample2')

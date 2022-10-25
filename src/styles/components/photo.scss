@@ -1,0 +1,11 @@
+.photo {
+  &-list {
+    list-style: none;
+    display: grid;
+    padding:0;
+    grid-template-columns: 130px 130px;
+    grid-template-rows: 120px 120px;
+    grid-row-gap: 16px;
+    grid-column-gap: 30px;
+  }
+}

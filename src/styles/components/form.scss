@@ -1,0 +1,17 @@
+@import "./src/styles/helpers/variables.scss";
+.form {
+  //text-align: center;
+  &__button {
+    width: 240px;
+    height: 56px;
+    background-color: $darkgreen;
+    border: none;
+    border-radius: 4px;
+    color: #E5E5E5;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

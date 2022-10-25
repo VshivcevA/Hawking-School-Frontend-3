@@ -1,0 +1,11 @@
+.features {
+  &__list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  &-item__img {
+    width: 79px;
+    height: 79px;
+  }
+}

@@ -1,0 +1,42 @@
+@import "./src/styles/helpers/variables.scss";
+.red-block {
+  background: red;
+  position: absolute;
+  width:74px;
+  height: 5px;
+  content: '';
+  top: -11px;
+  //left: 1px;
+}
+.process {
+  &__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+
+  }
+  &__list {
+
+    &--item {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 26px;
+      &::marker {
+        font-family: 'Montserrat';
+        vertical-align: text-top;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 61px;
+        color: $lightred;
+        opacity: 0.2;
+        content: counter(list-item) " ";
+      }
+
+    }
+  }
+}

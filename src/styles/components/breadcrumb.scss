@@ -1,0 +1,23 @@
+@import "./src/styles/helpers/variables.scss";
+
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  //list-style: none;
+  justify-content: flex-start;
+  padding-left: 0;
+  list-style-image: url("/assets/images/icon/pag-right-arrow.svg");
+  border-bottom: solid 1px $lighgrey;
+  padding-bottom: 8px;
+
+  &__item {
+    &:first-child {
+      list-style:none;
+      margin-left: 0;
+    }
+    margin-left: 20px;
+  }
+  &__link {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,12 @@
+.consult {
+  text-align: center;
+  &__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

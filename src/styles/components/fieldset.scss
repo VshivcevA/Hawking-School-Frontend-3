@@ -1,0 +1,17 @@
+.fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__input {
+    width: 100%;
+    height: 56px;
+    margin-bottom:15px;
+    padding-left: 17px;
+    box-sizing: border-box;
+  }
+}

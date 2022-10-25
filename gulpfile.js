@@ -8,4 +8,4 @@ const start = series(build, server);
 module.exports = {
   start,
   build,
-}
+};
