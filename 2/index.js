@@ -1,8 +1,13 @@
 const textArea = document.querySelector('#textarea');
-const button = document.querySelector('#button')
+const buttonSave = document.querySelector('#button-save')
+const buttonDelete = document.querySelector('#button-delete')
+
 
 textArea.value = localStorage.getItem("text")
 
-button.addEventListener('click', () => {
+buttonSave.addEventListener('click', () => {
   localStorage.setItem('text', textArea.value)
+})
+buttonDelete.addEventListener('click', () => {
+  localStorage.removeItem('text')
 })
